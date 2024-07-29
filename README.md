@@ -40,3 +40,7 @@ sudo launchctl disable system/com.microsoft.OneDriveStandaloneUpdaterDaemon.plis
 sudo launchctl disable system/com.microsoft.OneDriveUpdaterDaemon.plist<br />
 sudo launchctl disable system/com.microsoft.autoupdate.helper.plist<br />
 
+## For Mac App Store<br />
+Open terminal and modify the lastest updated date by typing<br />
+defaults write com.apple.appstored LastUpdateNotification -date "2029-12-12 12:00:00 +0000"<br />
+
