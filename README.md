@@ -6,37 +6,37 @@ sudo vi /etc/hosts<br />
 0.0.0.0 swdist.apple.com.edgekey.net<br />
 0.0.0.0 swdist.apple.com.akadns.net<br />
 
-## Prevent Chrome from updating
-Method that helped me:
+## Prevent Chrome from updating<br />
+Method that helped me:<br />
 
-To empty these directories:
-/Library/Google/GoogleSoftwareUpdate/
-~/Library/Google/GoogleSoftwareUpdate/
-Then change the permissions on these folders named 'GoogleSoftwareUpdate' so that there's no owner and no read/write/execute permissions.
-In terminal:
+To empty these directories:<br />
+/Library/Google/GoogleSoftwareUpdate/<br />
+~/Library/Google/GoogleSoftwareUpdate/<br />
+Then change the permissions on these folders named 'GoogleSoftwareUpdate' so that there's no owner and no read/write/execute permissions.<br />
+In terminal:<br />
 
-cd /Library/Google/
-sudo chown nobody:nogroup GoogleSoftwareUpdate
-sudo chmod 000 GoogleSoftwareUpdate
-cd ~/Library/Google/
-sudo chown nobody:nogroup GoogleSoftwareUpdate
-sudo chmod 000 GoogleSoftwareUpdate
-Then do the same for the folder Google one level up.
-cd /Library/
-sudo chown nobody:nogroup Google
-sudo chmod 000 Google
-cd ~/Library/
-sudo chown nobody:nogroup Google
-sudo chmod 000 Google
+cd /Library/Google/<br />
+sudo chown nobody:nogroup GoogleSoftwareUpdate<br />
+sudo chmod 000 GoogleSoftwareUpdate<br />
+cd ~/Library/Google/<br />
+sudo chown nobody:nogroup GoogleSoftwareUpdate<br />
+sudo chmod 000 GoogleSoftwareUpdate<br />
+Then do the same for the folder Google one level up.<br />
+cd /Library/<br />
+sudo chown nobody:nogroup Google<br />
+sudo chmod 000 Google<br />
+cd ~/Library/<br />
+sudo chown nobody:nogroup Google<br />
+sudo chmod 000 Google<br />
 
-## Prevent Microsoft updates on Mac
-Another options without delete …
-launchctl domain/service.plist
+## Prevent Microsoft updates on Mac<br />
+Another options without delete …<br />
+launchctl domain/service.plist<br />
 
-launchctl disable user/501/com.microsoft.update.agent.plist
-launchctl disable user/501/com.microsoft.OneDriveStandaloneUpdater.plist
+launchctl disable user/501/com.microsoft.update.agent.plist<br />
+launchctl disable user/501/com.microsoft.OneDriveStandaloneUpdater.plist<br />
 
-sudo launchctl disable system/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist
-sudo launchctl disable system/com.microsoft.OneDriveUpdaterDaemon.plist
-sudo launchctl disable system/com.microsoft.autoupdate.helper.plist
+sudo launchctl disable system/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist<br />
+sudo launchctl disable system/com.microsoft.OneDriveUpdaterDaemon.plist<br />
+sudo launchctl disable system/com.microsoft.autoupdate.helper.plist<br />
 
