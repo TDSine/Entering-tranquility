@@ -1,10 +1,10 @@
 # Entering-tranquility
 
 ## Prevent Mac from updating
-sudo vi /etc/hosts\n
-#Prevent updates\n
-0.0.0.0 swdist.apple.com.edgekey.net\n
-0.0.0.0 swdist.apple.com.akadns.net\n
+sudo vi /etc/hosts<br />
+#Prevent updates<br />
+0.0.0.0 swdist.apple.com.edgekey.net<br />
+0.0.0.0 swdist.apple.com.akadns.net<br />
 
 ## Prevent Chrome from updating
 Method that helped me:
