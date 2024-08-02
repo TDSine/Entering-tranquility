@@ -5,6 +5,10 @@ sudo vi /etc/hosts<br />
 #Prevent updates<br />
 0.0.0.0 swdist.apple.com.edgekey.net<br />
 0.0.0.0 swdist.apple.com.akadns.net<br />
+Now run the following two commands in the terminal, to remove the irritating red dot:<br />
+defaults write com.apple.systempreferences AttentionPrefBundleIDs 0<br />
+killall Dock<br />
+
 
 ## Prevent Chrome from updating<br />
 Method that helped me:<br />
